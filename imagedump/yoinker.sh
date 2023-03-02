@@ -5,5 +5,5 @@ jq -r 'to_entries|map("\(.key) \(.value|tostring)")|.[]' $1 | while read key val
   pre="${key}"
   echo "${val}"
   echo "${pre}"
-  googleimagesdownload -n --keywords "${val}" --limit 1 --prefix "${pre}"
+  ./image_downloader.py -n --keywords "${val}" --limit 1 --prefix "${pre}"
 done

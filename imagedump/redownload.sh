@@ -1,8 +1,8 @@
 #!/bin/sh
 
 searchnames="names-only.log"
-recipesdb="recipenames.json"
+imagedb="images.json"
 
 while read -r line; do
-grep "$line" $recipesdb >> missing.json
+grep "$line" $imagedb >> missing.json
 done <$searchnames
