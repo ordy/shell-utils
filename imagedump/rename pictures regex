@@ -1,0 +1,4 @@
+To rename image files, removing everything between the
+first space to the file extension.
+
+\ (.*).+?(?=\.)
